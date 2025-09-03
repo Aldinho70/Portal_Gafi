@@ -42,5 +42,12 @@ export async function initMap( locations ) {
     map3D.append(marker);
   });
 
-  document.body.append(map3D);
+  // console.log(map3D);
+  
+  return map3D
+  // document.body.append(map3D);
+
+  // Ahora, en lugar de append al body, el mapa se inserta en el div con ID "map".
+    // document.getElementById("map").append(map3D);
+    // $(".body").append(map3D);
 }

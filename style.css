@@ -1,9 +1,29 @@
-/* * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
+/* Base body styles to remove default margins and overflows */
 html,
-body {
+body{
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0;    
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+}
+
+/* Map container will take up all available vertical space */
+#map-container {
+    flex-grow: 1; /* Makes the map container fill the remaining space */
+}
+
+/* The gmp-map web component needs this to fill its container */
+gmp-map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Optional: Add some padding to the footer text */
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
