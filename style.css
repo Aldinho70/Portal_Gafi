@@ -3,7 +3,8 @@ html,
 body{
     height: 100%;
     margin: 0;
-    padding: 0;    
+    padding: 0;   
+    overflow-x: hidden; 
 }
 
 body {
@@ -26,4 +27,52 @@ gmp-map {
 .footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+#left-panel {
+    position: absolute;
+    top: 65px;
+    left: 5px;
+    width: 20%;
+    max-height: 86%;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+/* * Styles for the new collapsible right panel 
+ */
+#right-panel {
+    position: absolute;
+    top: 65px;
+    right: 5px;
+    width: 35%;
+    height: 90%;
+    max-height: calc(100vh - 150px);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 15px;
+    border-radius: 8px 0 0 8px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Class to move the panel off-screen */
+#right-panel.closed {
+    transform: translateX(100%);
+}
+
+/* Styles for the panel's header and content */
+#right-panel .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#right-panel .panel-content {
+    overflow-y: auto;
 }

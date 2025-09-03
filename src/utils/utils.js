@@ -1,3 +1,5 @@
+import { resetMap } from "../API/google_maps/google_maps.js";
+
 export const getLocationsOfUnits = (units) => {
   return units.map(unit => {
     const pos = unit.getPosition();
@@ -20,4 +22,9 @@ export const getLocationsOfUnits = (units) => {
       }
     };
   });
+}
+
+export const colapseSectionUnit = () => {
+  $("#right-panel").addClass("closed");
+  resetMap();
 }
