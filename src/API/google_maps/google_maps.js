@@ -1,4 +1,4 @@
-import { unitSectionDetails } from "../../componets/Units/UnitsSecion.js";
+import { unitSectionDetails } from "../../componets/Units/UnitsSection.js";
 
 export let map3D = null;
 
