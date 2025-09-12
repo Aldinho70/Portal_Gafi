@@ -4,7 +4,7 @@ import { Footer } from "./src/componets/Footer/Footer.js";
 import { unitSectionDetails } from "./src/componets/Units/UnitsSection.js";
 import { getLocationsOfUnits, colapseSectionUnit  } from "./src/utils/utils.js";
 import { initMap, flyCameraToByUnit } from "./src/API/google_maps/google_maps.js";
-import { createSectionsUnits, createSectionsUnitsPerGroups} from "./src/componets/Units/Units.js";
+import { createSectionsUnits, createSectionsUnitsPerGroups, setupListClick, setupSearchFilter} from "./src/componets/Units/Units.js";
 
 import { getGrupos } from "./src/API/wialon/utils/getGroups.js";
 
@@ -30,6 +30,9 @@ async function iniciarWialon(token) {
   $("body").append( createSectionsUnits( units ) );
   $("body").append( createSectionsUnitsPerGroups( _groups ) );
   $("body").append( Footer() );
+
+  setupSearchFilter();
+  setupListClick();
 }
 
 iniciarWialon(TOKEN);

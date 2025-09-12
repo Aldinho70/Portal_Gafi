@@ -25,6 +25,7 @@ export const getLocationsOfUnits = (units) => {
 }
 
 export const colapseSectionUnit = () => {
+  $("#close-right-panel-btn").addClass("visually-hidden");
   $("#right-panel").addClass("closed");
   resetMap();
 }
