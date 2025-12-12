@@ -1,4 +1,4 @@
-export const TOKEN = "733a7307cd0dd55c139f57fcaa9269d33033EF2588751D51ECB53AA291A5B6501EF5426B";
+export const TOKEN = "733a7307cd0dd55c139f57fcaa9269d3F2C3174113FA868A9CA730A6B29A073E52098058";
 
 export const URI = {
     URI_PRODUCCION: 'http://ws4cjdg.com/RendimientoGafi.com/index.html',
